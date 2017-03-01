@@ -1,0 +1,37 @@
+%% Zotonic site configuration for mpwebsite.
+[
+ %% This site is enabled or not.
+ {enabled, true},
+
+ %% Hostname on which this site runs
+ {hostname, "mypeople.com"},
+
+ %% Aliases which should redirect to the primary hostname
+ %%{hostalias, ["www.example.com", "example.com"]},
+
+ %% PostgreSQL database connection
+ {dbhost, "127.0.0.1"},
+ {dbport, 5432 },
+ {dbuser, "zotonic"},
+ {dbpassword, "tkrotua52"},
+ {dbdatabase, "zotonic"},
+ {dbschema, "mypeople"},
+
+ %% Depcache settings. The maximum size in Mbs
+ {depcache_memory_max, 100},
+
+ %% Password for the 'admin' user.
+ {admin_password, "tkrotua52"},
+
+ %% What skeleton site this site is based on; for installing the initial data.
+ {
+   skeleton, empty
+ },
+ %%% JWT setting
+    {jwt_secret, "AAAAUdzA1eGg0eWR1ZFRhMzRzUnhGSUFoAmgDYgAAB%2BJhAmEGaANhD2ErYSprA"},
+    {jwt_expiration_offset, 24}
+
+ %% Uncomment to override skeleton defaults
+ %%,{install_menu, []}
+ %%,{install_modules, []}
+].
